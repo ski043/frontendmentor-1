@@ -1,3 +1,140 @@
-.hi {
+@import "config";
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: $mainBg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.card {
+  background-color: $cardBg;
+  height: 80%;
+  width: 85%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  height: 30%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.text {
+  height: 70%;
+  width: 100%;
+  padding: 0px 11%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  color: $mainHeading;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  .span {
+    color: $violet;
+    font-size: 1.5rem;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+  }
+}
+
+.desciption {
+  color: $description;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.stats {
+  margin: 0.75rem 0px;
+}
+
+.stat {
+  color: $mainHeading;
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+.stat-text {
+  color: $statHeading;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.attribution {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    flex-direction: row-reverse;
+    height: 75%;
+  }
+
+  .text {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .heading {
+    text-align: left;
+    font-size: 2.8rem;
+
+    .span {
+      font-size: 2.8rem;
+    }
+  }
+
+  .desciption {
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 3rem 0;
+  }
+
+  .text-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .stats {
+    text-align: left;
+  }
+
+  .stat {
+    font-size: 3rem;
+  }
+
+  .stat-text {
+    font-size: 1.2rem;
+  }
 }
